@@ -13,3 +13,29 @@ img {
 a {
   text-decoration: none;
 }
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "Raleway", "Arial", sans-serif;
+  line-height: 100%;
+  font-weight: 400;
+
+  background-color: $white;
+}
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.main-container {
+  flex-grow: 1;
+}
