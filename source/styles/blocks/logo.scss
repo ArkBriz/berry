@@ -1,3 +1,9 @@
 .logo__word {
   display: none;
 }
+
+@include media("mobile") {
+  .page-header__container--nojs .logo__word {
+    display: inline;
+  }
+}

@@ -1,8 +1,10 @@
 /* GLOBAL */
 @import "common/variables.scss";
+@import "common/media.scss";
 @import "common/global.scss";
 @import "common/fonts.scss";
 
 /* BLOCKS */
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
+@import "blocks/nav.scss";
