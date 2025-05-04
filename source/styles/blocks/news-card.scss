@@ -1,0 +1,32 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 400px;
+  padding: 32px 18px 72px;
+
+  border: 2px solid $green;
+  border-radius: 40px;
+}
+
+.news-card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 204px;
+  min-height: 68px;
+  margin: 0 auto 20px;
+
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.news-card__text {
+  margin: 0;
+}
+
+.news-card__time {
+  margin-top: auto;
+  align-self: flex-end;
+}

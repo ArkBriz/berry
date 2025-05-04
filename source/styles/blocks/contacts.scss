@@ -1,0 +1,34 @@
+.contacts {
+  padding: 104px 0 24px;
+}
+
+.contacts__container {
+  width: $mobile-width-min;
+  margin: 0 auto;
+  padding: 0 28px 24px;
+}
+
+.contacts__title {
+  margin-top: 70px;
+  margin-bottom: 34px;
+
+  font-size: 16px;
+  text-align: center;
+}
+
+.contacts__data {
+  font-style: normal;
+}
+
+.contacts__item {
+  display: block;
+  margin: 0;
+  margin-bottom: 12px;
+  padding-left: 36px;
+
+  color: $black;
+
+  &--email {
+    margin-bottom: 0;
+  }
+}
