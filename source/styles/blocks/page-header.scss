@@ -39,7 +39,7 @@
 .page-header__container {
   &--closed .page-header__toggler::before {
     content: "";
-    display: none;
+    display: block;
     width: 45px;
     height: 5px;
     margin-top: 15px;
