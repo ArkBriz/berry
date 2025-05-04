@@ -1,0 +1,32 @@
+.order-header {
+  padding-top: 120px;
+
+  background-image: url("../images/cranberry-header-tablet@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 768px auto;
+}
+
+.order-header__container {
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-bottom: 74px;
+
+  background-color: $white;
+  text-align: center;
+}
+
+.order-header__title {
+  width: 268px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  font-family: "Comfortaa", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: $green;
+}
+
+.order-header__offer {
+  width: 268px;
+  margin: 0 auto;
+}
