@@ -1,12 +1,14 @@
 .page-header {
   position: relative;
-
   background-color: $blue-gray;
   box-shadow: 0 4px 4px rgb(#580d65, 0.25);
+  z-index: 10;
 }
 
 .page-header__container {
+  position: relative;
   width: $mobile-width-min;
+  margin: 0 auto;
 }
 
 .page-header__wrapper {
@@ -15,7 +17,6 @@
   align-items: center;
   padding-block: 4px;
   padding-inline: 26px 21px;
-  border-bottom: 1px solid rgb(#580d65, 0.25);
 }
 
 .page-header__toggler {

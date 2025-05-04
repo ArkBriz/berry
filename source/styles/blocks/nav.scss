@@ -1,5 +1,6 @@
 .nav {
   display: none;
+  width: $mobile-width-min;
   min-height: 360px;
   padding: 27px 40px;
 
@@ -9,7 +10,7 @@
   @include media("mobile") {
     position: absolute;
     width: 100%;
-    margin-top: 5px;
+    box-shadow: inset 0 4px 4px rgb(#580d65, 0.25);
   }
 }
 
@@ -21,6 +22,7 @@
   .page-header__container--nojs .nav {
     position: static;
     display: block;
+    min-height: 250px;
   }
 }
 

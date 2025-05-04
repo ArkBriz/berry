@@ -1,0 +1,27 @@
+.main-header {
+  padding-top: 60px;
+  padding-bottom: 190px;
+  background-image: url("../images/strawberry-header@1x.webp");
+  background-size: auto 890px;
+  background-repeat: no-repeat;
+  background-position: -290px -30px;
+}
+
+.main-header__container {
+  width: $mobile-width-min;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-header__list {
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 58px;
+  text-align: left;
+}
+
+.main-header__button {
+  display: inline-block;
+  min-width: 264px;
+  box-shadow: 0 4px 4px 0 rgb(#580D65, 0.4);
+}
