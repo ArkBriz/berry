@@ -1,6 +1,19 @@
 .catalog {
   width: $mobile-width-min;
   padding: 60px 26px;
+
+  @include media("tablet") {
+    width: 580px;
+    padding: 100px 0;
+  }
+
+  @include media("desktop") {
+    width: 840px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1128px;
+  }
 }
 
 .catalog__list {
@@ -12,6 +25,23 @@
   padding: 0;
 
   list-style-type: none;
+
+  @include media("tablet") {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 52px;
+
+    margin-top: 72px;
+  }
+
+  @include media("desktop") {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 52px 24px;
+    margin-top: 92px;
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .catalog__item {

@@ -1,13 +1,33 @@
 .news {
   width: $mobile-width-min;
   padding: 96px 26px 60px;
-}
 
-.news .title {
-  margin-bottom: 64px;
+  @include media("tablet") {
+    width: 716px;
+    padding: 114px 0 100px;
+  }
+
+  @include media("desktop") {
+    width: 1128px;
+  }
 }
 
 .news__container {
   display: grid;
   gap: 24px;
+
+  margin-top: 64px;
+
+  @include media("tablet") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 34px 20px;
+
+    margin-top: 72px;
+  }
+
+  @include media("desktop") {
+    gap: 24px;
+  }
 }
