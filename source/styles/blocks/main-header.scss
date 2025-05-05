@@ -1,27 +1,74 @@
 .main-header {
   padding-top: 60px;
   padding-bottom: 190px;
-  background-image: url("../images/strawberry-header@1x.webp");
-  background-size: auto 890px;
+
+  background-image: url("../images/strawberry-header-tablet@1x.webp");
+  background-size: auto 790px;
   background-repeat: no-repeat;
-  background-position: -290px -30px;
+  background-position: -25px -12px;
+
+  @media (min-width: 630px) {
+    padding-top: 142px;
+    padding-bottom: 420px;
+
+    background-size: cover;
+    background-position: center -40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 172px;
+    padding-bottom: 252px;
+
+    background-image: url("../images/strawberry-header@1x.webp");
+    background-position: 0;
+  }
 }
 
 .main-header__container {
   width: $mobile-width-min;
   margin: 0 auto;
   text-align: center;
+
+  @include media("tablet") {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding-left: 214px;
+
+    text-align: left;
+
+    & .main__title {
+      line-height: 100%;
+      text-align: left;
+    }
+  }
+
+  @include media("desktop") {
+
+  }
 }
 
 .main-header__list {
-  margin: 0 auto;
-  margin-top: 32px;
-  margin-bottom: 58px;
-  text-align: left;
+  margin: 32px auto 58px;
+
+  @include media("tablet") {
+    margin: 48px 0;
+  }
+
+  @include media("desktop") {
+    margin: 52px 0;
+  }
 }
 
 .main-header__button {
   display: inline-block;
   min-width: 264px;
   box-shadow: 0 4px 4px 0 rgb(#580D65, 0.4);
+
+  @include media("tablet") {
+    width: 336px;
+    padding-block: 16px;
+
+    font-size: 28px;
+    line-height: 36px;
+  }
 }

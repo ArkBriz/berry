@@ -3,6 +3,15 @@
 
   font-family: "Comfortaa", "Arial", sans-serif;
   font-size: 36px;
+  line-height: 100%;
   font-weight: 400;
   color: $green;
+
+  @include media("tablet") {
+    font-size: 48px;
+  }
+
+  @include media("desktop") {
+    font-size: 52px;
+  }
 }

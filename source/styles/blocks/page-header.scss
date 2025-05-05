@@ -9,6 +9,20 @@
   position: relative;
   width: $mobile-width-min;
   margin: 0 auto;
+
+  @include media("tablet") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 716px;
+    padding-block: 22px;
+  }
+
+  @include media("desktop") {
+    width: 1128px;
+    padding: 24px 36px;
+    padding-left: 0;
+  }
 }
 
 .page-header__wrapper {
@@ -17,6 +31,10 @@
   align-items: center;
   padding-block: 4px;
   padding-inline: 26px 21px;
+
+  @include media("tablet") {
+    padding-inline: 0;
+  }
 }
 
 .page-header__toggler {
@@ -29,6 +47,10 @@
 
   background-color: transparent;
   border: none;
+
+  @include media("tablet") {
+    display: none;
+  }
 }
 
 @include media("mobile") {

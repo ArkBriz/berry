@@ -30,6 +30,11 @@ body {
   color: $black;
 
   background-color: $white;
+
+  @include media("tablet") {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .visually-hidden {
