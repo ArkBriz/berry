@@ -4,6 +4,9 @@
 }
 
 .catalog__list {
+  display: grid;
+  gap: 24px;
+
   margin: 0;
   margin-top: 60px;
   padding: 0;

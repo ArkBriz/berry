@@ -1,10 +1,32 @@
 .form-group {
+  width: 268px;
   margin: 0;
   margin-bottom: 32px;
   padding: 0;
 
   font-size: 16px;
   border: none;
+
+  @include media("mobile") {
+    &--berries .form-group__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, min-content);
+      column-gap: 20px;
+    }
+
+    .form-group__item--cranberry {
+      grid-row: 6 / 7;
+      grid-column: 1 / 2;
+    }
+
+    &--storage .form-group__list {
+      row-gap: 24px;
+    }
+
+    &--contacts .form-group__list {
+      row-gap: 36px;
+    }
+  }
 }
 
 .form-group__title {
@@ -15,8 +37,15 @@
 }
 
 .form-group__list {
+  display: grid;
+  row-gap: 32px;
+
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+}
+
+.form-group__item {
+  padding-left: 36px;
 }

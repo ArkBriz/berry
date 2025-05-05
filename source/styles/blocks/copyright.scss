@@ -1,4 +1,14 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .copyright__name {
   font-size: 11px;
   color: $black;
+}
+
+.copyright__logo {
+  height: 32px;
 }

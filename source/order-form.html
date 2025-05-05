@@ -68,8 +68,8 @@
     </header>
 
     <section class="main__section order-section">
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="form-group">
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="form-group form-group--berries">
           <legend class="form-group__title">Выберите ягоды</legend>
           <ul class="form-group__list">
             <li class="form-group__item">
@@ -80,26 +80,8 @@
             </li>
             <li class="form-group__item">
               <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="blueberry">
-                <span class="control__label">голубика</span>
-              </label>
-            </li>
-            <li class="form-group__item">
-              <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="strawberry">
-                <span class="control__label">клубника</span>
-              </label>
-            </li>
-            <li class="form-group__item">
-              <label class="control control--checkbox">
                 <input class="visually-hidden" type="checkbox" name="berry" value="gooseberry">
                 <span class="control__label">крыжовник</span>
-              </label>
-            </li>
-            <li class="form-group__item">
-              <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="cloudberry">
-                <span class="control__label">морошка</span>
               </label>
             </li>
             <li class="form-group__item">
@@ -110,32 +92,50 @@
             </li>
             <li class="form-group__item">
               <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="blackberry">
-                <span class="control__label">ежевика</span>
-              </label>
-            </li>
-            <li class="form-group__item">
-              <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="cranberry">
-                <span class="control__label">клюква</span>
-              </label>
-            </li>
-            <li class="form-group__item">
-              <label class="control control--checkbox">
                 <input class="visually-hidden" type="checkbox" name="berry" value="ruspberry">
                 <span class="control__label">малина</span>
               </label>
             </li>
             <li class="form-group__item">
               <label class="control control--checkbox">
-                <input class="visually-hidden" type="checkbox" name="berry" value="bilberry">
+                <input class="visually-hidden" type="checkbox" name="berry" value="blueberry">
+                <span class="control__label">голубика</span>
+              </label>
+            </li>
+            <li class="form-group__item">
+              <label class="control control--checkbox">
+                <input class="visually-hidden" type="checkbox" name="berry" value="cloudberry" disabled>
+                <span class="control__label">морошка</span>
+              </label>
+            </li>
+            <li class="form-group__item">
+              <label class="control control--checkbox">
+                <input class="visually-hidden" type="checkbox" name="berry" value="blackberry">
+                <span class="control__label">ежевика</span>
+              </label>
+            </li>
+            <li class="form-group__item">
+              <label class="control control--checkbox">
+                <input class="visually-hidden" type="checkbox" name="berry" value="bilberry" disabled>
                 <span class="control__label">черника</span>
+              </label>
+            </li>
+            <li class="form-group__item">
+              <label class="control control--checkbox">
+                <input class="visually-hidden" type="checkbox" name="berry" value="strawberry">
+                <span class="control__label">клубника</span>
+              </label>
+            </li>
+            <li class="form-group__item form-group__item--cranberry">
+              <label class="control control--checkbox">
+                <input class="visually-hidden" type="checkbox" name="berry" value="cranberry">
+                <span class="control__label">клюква</span>
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
+        <fieldset class="form-group form-group--storage">
           <legend class="form-group__title">Вид хранения</legend>
           <ul class="form-group__list">
             <li class="form-group__item">
@@ -177,27 +177,29 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form-group">
+        <fieldset class="form-group form-group--contacts">
           <legend class="form-group__title form-group__title--contacts">Ваши контакты</legend>
-          <div class="field-group">
-            <label class="field-group__label" for="name">Имя<span>*</span></label>
-            <input class="field-group__input" type="text" id="name" name="name" placeholder="Как к вам обращаться?">
-          </div>
-          <div class="field-group">
-            <label class="field-group__label" for="phone">Телефон<span>*</span></label>
-            <input class="field-group__input" type="text" id="phone" name="phone" placeholder="+7 ххх ххх хх хх">
-          </div>
-          <div class="field-group">
-            <label class="field-group__label" for="email">Email<span>*</span></label>
-            <input class="field-group__input" type="email" id="email" name="email" placeholder="Ваш email">
-          </div>
-          <div class="field-group">
-            <label class="field-group__label" for="address">Адрес<span>*</span></label>
-            <input class="field-group__input" type="text" id="address" name="address" placeholder="Адрес в Санкт-Петербурге">
-          </div>
-          <div class="field-group">
-            <label class="field-group__label" for="order-notes">Пожелания к заказу</label>
-            <textarea class="field-group__input" id="order-notes" name="order-notes" placeholder="Чем мы можем вам помочь?"></textarea>
+          <div class="form-group__list">
+            <div class="field-group">
+              <label class="field-group__label" for="name">Имя<span>*</span></label>
+              <input class="field-group__input" type="text" id="name" name="name" placeholder="Как к вам обращаться?">
+            </div>
+            <div class="field-group">
+              <label class="field-group__label" for="phone">Телефон<span>*</span></label>
+              <input class="field-group__input" type="text" id="phone" name="phone" placeholder="+7 ххх ххх хх хх">
+            </div>
+            <div class="field-group">
+              <label class="field-group__label" for="email">Email<span>*</span></label>
+              <input class="field-group__input" type="email" id="email" name="email" placeholder="Ваш email">
+            </div>
+            <div class="field-group">
+              <label class="field-group__label" for="address">Адрес<span>*</span></label>
+              <textarea class="field-group__input" id="address" name="address" placeholder="Адрес в Санкт-Петербурге"></textarea>
+            </div>
+            <div class="field-group">
+              <label class="field-group__label" for="order-notes">Пожелания к заказу</label>
+              <textarea class="field-group__input" id="order-notes" name="order-notes" placeholder="Чем мы можем вам помочь?"></textarea>
+            </div>
           </div>
         </fieldset>
 
@@ -245,7 +247,7 @@
         </svg>
       </a>
 
-      <ul class="socials">
+      <ul class="page-footer__socials socials">
         <li class="socials__item">
           <a class="socials__link" href="#" aria-label="Телеграм">
             <svg class="socials__icon" role="img" width="32" height="32" fill="#0f805d">
@@ -272,7 +274,7 @@
         </li>
       </ul>
 
-      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">Разработано в</span>
         <span class="copyright__name">HTML Academy</span>
         <span class="copyright__logo">

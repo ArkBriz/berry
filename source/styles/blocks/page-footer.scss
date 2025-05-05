@@ -3,7 +3,21 @@
 }
 
 .page-footer__container {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  justify-content: end;
+  row-gap: 9px;
+
   width: $mobile-width-min;
   margin: 0 auto;
   padding: 11px 26px 20px;
+}
+
+.page-footer__socials {
+  margin-left: auto;
+}
+
+.page-footer__copyright {
+  grid-column: 2 / 3;
+  margin-left: auto;
 }

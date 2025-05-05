@@ -1,0 +1,17 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group__label {
+  margin-bottom: 6px;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.field-group__label span {
+  display: inline-block;
+  margin-left: 4px;
+
+  font-size: 16px;
+}

@@ -6,3 +6,8 @@
 .news .title {
   margin-bottom: 64px;
 }
+
+.news__container {
+  display: grid;
+  gap: 24px;
+}
