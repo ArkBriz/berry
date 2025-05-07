@@ -4,6 +4,16 @@
   background-image: url("../images/cranberry-header-tablet@1x.jpg");
   background-repeat: no-repeat;
   background-size: $tablet-width auto;
+
+  @include media("tablet") {
+    padding-top: 200px;
+
+    background-size: contain;
+  }
+
+  @include media("desktop") {
+    background-image: url("../images/cranberry-header@1x.jpg");
+  }
 }
 
 .order-header__container {
@@ -13,6 +23,15 @@
 
   background-color: $white;
   text-align: center;
+
+  @include media("tablet") {
+    padding-top: 100px;
+    padding-bottom: 77px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 88px;
+  }
 }
 
 .order-header__title {
@@ -22,11 +41,39 @@
 
   font-family: "Comfortaa", "Arial", sans-serif;
   font-size: 36px;
+  line-height: 120%;
   font-weight: 400;
   color: $green;
+
+  @include media("tablet") {
+    width: 480px;
+    margin-bottom: 52px;
+
+    font-size: 48px;
+  }
+
+  @include media("desktop") {
+    margin-bottom: 48px;
+
+    font-size: 52px;
+  }
 }
 
 .order-header__offer {
   width: 268px;
   margin: 0 auto;
+
+  @include media("tablet") {
+    width: 480px;
+
+    font-size: 18px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  @include media("desktop") {
+    width: 550px;
+  }
 }
