@@ -7,6 +7,10 @@
 .copyright__name {
   font-size: 11px;
   color: $black;
+
+  @include media("tablet") {
+    font-size: 16px;
+  }
 }
 
 .copyright__logo {

@@ -3,7 +3,7 @@
 
   background-image: url("../images/cranberry-header-tablet@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 768px auto;
+  background-size: $tablet-width auto;
 }
 
 .order-header__container {

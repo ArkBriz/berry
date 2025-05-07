@@ -17,3 +17,10 @@
     display: inline;
   }
 }
+
+@include media("tablet") {
+  .logo__img {
+    width: 60px;
+    height: 60px;
+  }
+}

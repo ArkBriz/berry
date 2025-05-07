@@ -11,13 +11,32 @@
   width: $mobile-width-min;
   margin: 0 auto;
   padding: 11px 26px 20px;
+
+  @include media("tablet") {
+    grid-template-columns: 135px 1fr 153px;
+    width: $tablet-width;
+    padding: 22px 26px 22px 20px;
+  }
+
+  @include media("desktop") {
+    width: 1124px;
+  }
 }
 
 .page-footer__socials {
   margin-left: auto;
+
+  @include media("tablet") {
+    margin-left: 0;
+    justify-self: center;
+  }
 }
 
 .page-footer__copyright {
   grid-column: 2 / 3;
   margin-left: auto;
+
+  @include media("tablet") {
+    grid-column: auto;
+  }
 }
