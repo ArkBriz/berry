@@ -1,12 +1,39 @@
 .field-group {
   display: flex;
   flex-direction: column;
+
+  @include media ("tablet") {
+    &--name {
+      grid-area: name;
+    }
+
+    &--phone {
+      grid-area: phone;
+    }
+
+    &--email {
+      grid-area: email;
+    }
+
+    &--address {
+      grid-area: address;
+    }
+
+    &--notes {
+      grid-area: notes;
+    }
+  }
 }
 
 .field-group__label {
   margin-bottom: 6px;
   margin-left: 12px;
   font-size: 14px;
+
+  @include media ("tablet") {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .field-group__label span {

@@ -1,5 +1,32 @@
 .order-section {
   width: $mobile-width-min;
   padding: 50px 26px 89px;
+
+  @include media("tablet") {
+    width: 624px;
+    padding: 73px 0 100px;
+
+    & > .order-form > .form-group {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media("desktop") {
+    width: 792px;
+
+    & > .order-form > .form-group {
+      margin-bottom: 48px;
+    }
+  }
 }
 
+.order-section__container {
+  @include media ("tablet") {
+    width: 485px;
+    margin: 0 auto;
+  }
+
+  @include media("desktop") {
+    width: 100%;
+  }
+}
