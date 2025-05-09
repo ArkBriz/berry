@@ -15,8 +15,34 @@
 }
 
 .benefits__item {
+  position: relative;
   margin-bottom: 12px;
   padding-left: 50px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    content: "";
+  }
+
+  &--leaf::before {
+    background-image: url("../icons/stack.svg#leaf");
+  }
+
+  &--snowflake::before {
+    background-image: url("../icons/stack.svg#snowflake");
+  }
+
+  &--moped::before {
+    background-image: url("../icons/stack.svg#moped");
+  }
 
   @include media("tablet") {
     margin-bottom: 19px;

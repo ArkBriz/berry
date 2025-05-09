@@ -1,8 +1,29 @@
 .contacts {
+  position: relative;
   padding: 104px 0 60px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 228px;
+    height: 32px;
+    margin: 0 auto;
+
+    background-image: url("../icons/stack.svg#branch-2");
+    content: "";
+  }
 
   @include media("tablet") {
     padding: 114px 0 100px;
+
+    &::before {
+      width: 296px;
+      height: 42px;
+    }
   }
 
   @include media("desktop") {
@@ -58,9 +79,10 @@
 }
 
 .contacts__item {
+  position: relative;
   display: block;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   padding-left: 36px;
 
   color: $black;
@@ -69,8 +91,29 @@
     margin-bottom: 0;
   }
 
-  @include media("tablet") {
-    margin-bottom: 18px;
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    content: "";
+  }
+
+  &--address::before {
+    background-image: url("../icons/stack.svg#leaf-position");
+  }
+
+  &--phone::before {
+    background-image: url("../icons/stack.svg#phone");
+  }
+
+  &--email::before {
+    background-image: url("../icons/stack.svg#email");
   }
 }
 
