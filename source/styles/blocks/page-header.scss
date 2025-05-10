@@ -74,6 +74,15 @@
         0 25px $green;
   }
 
+  &--closed .page-header__toggler:hover::before,
+  &--closed .page-header__toggler:focus::before {
+    background-color: $green-hover;
+
+    box-shadow:
+    0 12.5px $green-hover,
+    0 25px $green-hover;
+  }
+
   &--opened .page-header__toggler {
     &::before,
     &::after {
@@ -95,6 +104,13 @@
 
     &::after {
       transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: $green-hover;
     }
   }
 }

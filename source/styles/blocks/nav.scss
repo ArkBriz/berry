@@ -64,7 +64,7 @@
   margin-bottom: 0;
 
   @include media("tablet") {
-    margin-right: 32px;
+    margin-right: 12px;
   }
 }
 
@@ -74,7 +74,21 @@
 
   color: #000000;
 
+  &--current {
+    color: $green;
+  }
+
+  &:hover,
+  &:focus {
+    color: $green-hover;
+    outline: none;
+  }
+
+  &:active {
+    color: $green-active;
+  }
+
   @include media("tablet") {
-    padding-block: 20px;
+    padding: 20px 10px;
   }
 }

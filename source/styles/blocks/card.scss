@@ -6,6 +6,32 @@
   width: 264px;
 }
 
+.card__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $green;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    .card__title {
+      color: $green-hover
+    }
+  }
+
+  &:active {
+    .card__title {
+      color: $green-active;
+    }
+
+    .card__img {
+      opacity: 0.3;
+    }
+  }
+}
+
 .card__title {
   margin: 0;
   margin-bottom: 28px;

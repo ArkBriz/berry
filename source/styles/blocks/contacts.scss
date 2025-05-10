@@ -117,6 +117,16 @@
   }
 }
 
+a.contacts__item:hover,
+a.contacts__item:focus {
+  color: $green-hover;
+  outline: none;
+}
+
+a.contacts__item:active {
+  color: $green-active;
+}
+
 @include media("desktop") {
   .contacts__map {
     display: block;

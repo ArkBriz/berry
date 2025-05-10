@@ -2,6 +2,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[href]:hover .logo__word,
+  &[href]:hover .logo__leaf,
+  &[href]:focus .logo__word,
+  &[href]:focus .logo__leaf {
+    fill: $green-hover;
+  }
+
+  &[href]:active .logo__word,
+  &[href]:active .logo__leaf {
+    fill: $green-active;
+  }
 }
 
 .logo__word {

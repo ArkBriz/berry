@@ -12,6 +12,7 @@ import { createGulpEsbuild } from 'gulp-esbuild';
 import browserslistToEsbuild from 'browserslist-to-esbuild';
 import sharp from 'gulp-sharp-responsive';
 import svgo from 'gulp-svgmin';
+import svgoConfig from './svgo.config.js';
 import { stacksvg } from 'gulp-stacksvg';
 import server from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
@@ -120,7 +121,7 @@ export function optimizeRaster () {
 
 export function optimizeVector () {
   return src([`${PATH_TO_RAW}**/*.svg`])
-    .pipe(svgo())
+    .pipe(svgo(svgoConfig))
     .pipe(dest(PATH_TO_SOURCE));
 }
 
