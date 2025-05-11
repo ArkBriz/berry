@@ -52,54 +52,81 @@
 }
 
 .form-group__list {
-  display: grid;
-  row-gap: 32px;
-
   margin: 0;
   padding: 0;
+  break-inside: avoid;
 
   list-style-type: none;
 
   @include media("mobile") {
     &--berries {
-      grid-template-columns: repeat(2, 1fr);
+      columns: 2;
       column-gap: 20px;
+
+      & .form-group__item {
+        margin-bottom: 30px;
+      }
+
+      &::after {
+        content: "!";
+        display: block;
+        padding-block: 5px;
+        visibility: hidden;
+      }
     }
 
     &--storage {
-      row-gap: 24px;
+      & .form-group__item {
+        margin-bottom: 20px;
+      }
+    }
+
+    &--delivery {
+      & .form-group__item {
+        margin-bottom: 22px;
+      }
     }
 
     &--contacts {
+      display: grid;
       row-gap: 36px;
     }
   }
 
   @include media("tablet") {
-    row-gap: 25px;
-
     &--berries {
-      grid-template-columns: repeat(3, 1fr);
+      columns: 3;
       column-gap: 66px;
+
+      & .form-group__item {
+        margin-bottom: 20px;
+      }
     }
 
     &--storage {
-      grid-template-columns: repeat(2, max-content);
+      columns: 2;
       column-gap: 54px;
+
+      & .form-group__item {
+        width: max-content;
+        margin-bottom: 20px;
+      }
     }
 
     &--delivery {
+      display: grid;
       grid-template-columns: 205px 255px;
       gap: 24px;
     }
 
     &--contacts {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
-                          "name ."
-                          "phone email"
-                          "address address"
-                          "notes notes";
+        "name ."
+        "phone email"
+        "address address"
+        "notes notes";
       row-gap: 36px;
       column-gap: 24px;
 
@@ -108,121 +135,33 @@
   }
 
   @include media("desktop") {
-    column-gap: 48px;
-
     &--berries {
-      grid-template-columns: repeat(5, 1fr);
+      columns: 5;
+      column-gap: 48px;
     }
 
     &--storage {
-      grid-template-columns: repeat(3, max-content);
+      display: grid;
+      grid-template-columns: repeat(3, min-content);
+      gap: 48px;
+
+      & .form-group__item {
+        margin-bottom: 0;
+      }
     }
 
     &--delivery {
       grid-template-columns: 251px 354px;
       gap: 48px;
+
+      & br:last-child {
+        display: none;
+      }
     }
   }
 }
 
 .form-group__item {
+  padding-block: 5px;
   padding-left: 36px;
-
-  @include media("mobile") {
-    &--cranberry {
-      grid-row: 6 / 7;
-      grid-column: 1 / 2;
-    }
-  }
-
-  @include media("tablet") {
-    &--strawberry {
-      grid-row: 1 / 2;
-      grid-column: 2 / 3;
-    }
-
-    &--cloudberry {
-      grid-row: 1 / 2;
-      grid-column: 3 / 4;
-    }
-
-    &--berry {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-    }
-
-    &--cranberry {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    &--bilberry {
-      grid-row: 2 / 3;
-      grid-column: 3 / 4;
-    }
-
-    &--blueberry {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-    }
-
-    &--gooseberry {
-      grid-column: 2 / 3;
-    }
-
-    &--raspberry {
-      grid-row: 4 / 5;
-      grid-column: 2 / 3;
-    }
-
-    &--blackberry {
-      grid-row: 4 / 5;
-    }
-
-    &--frozen {
-      grid-row: 2 / 3;
-    }
-  }
-
-  @include media("desktop") {
-    &--blueberry {
-      grid-row: 1 / 2;
-      grid-column: 2 / 3;
-    }
-
-    &--strawberry {
-      grid-column: 3 / 4;
-    }
-
-    &--gooseberry {
-      grid-column: 4 / 5;
-      grid-row: 1 /  2;
-    }
-
-    &--cloudberry {
-      grid-column: 5 / 6;
-    }
-
-    &--bilberry {
-      grid-column: 5 / 6;
-    }
-
-    &--cranberry {
-      grid-column: 3 / 4;
-    }
-
-    &--blackberry {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    &--raspberry {
-      grid-column: 4 / 5;
-      grid-row: 2 / 3;
-    }
-
-    &--frozen {
-      grid-row: auto;
-    }
-  }
 }
