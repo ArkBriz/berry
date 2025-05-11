@@ -1,6 +1,15 @@
 .field-group {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &--address {
+    min-height: 112px;
+  }
+
+  &--notes {
+    min-height: 148px;
+  }
 
   @include media ("tablet") {
     &--name {
@@ -17,11 +26,23 @@
 
     &--address {
       grid-area: address;
+      min-height: 76px;
     }
 
     &--notes {
       grid-area: notes;
+      min-height: 168px;
     }
+  }
+
+  &__error-text {
+    position: absolute;
+    bottom: -25px;
+
+    display: none;
+    padding-left: 13px;
+
+    color: $red-error;
   }
 }
 
@@ -41,4 +62,44 @@
   margin-left: 4px;
 
   font-size: 16px;
+}
+
+.field-group__input {
+  height: 100%;
+  padding: 16px 12px;
+
+  font-size: 16px;
+
+  border: 1px solid $green;
+  border-radius: 20px;
+  resize: none;
+  cursor: pointer;
+
+  &::placeholder {
+    font-size: 16px;
+    color: $gray-disabled;
+  }
+
+  &:hover {
+    border-color: $green-hover;
+  }
+
+  &:disabled {
+    background-color: transparent;
+    border-color: $gray-disabled;
+    cursor: auto;
+  }
+
+  &:user-invalid:focus {
+    border-color: $red-error;
+  }
+
+  &:user-invalid + .field-group__error-text {
+    display: block;
+  }
+
+  &:focus {
+    border-color: $green-hover;
+    outline: none;
+  }
 }

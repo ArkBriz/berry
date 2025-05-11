@@ -185,19 +185,23 @@
           <div class="form-group__list form-group__list--contacts">
             <div class="field-group field-group--name">
               <label class="field-group__label" for="name">Имя<span>*</span></label>
-              <input class="field-group__input" type="text" id="name" name="name" placeholder="Как к вам обращаться?">
+              <input class="field-group__input" type="text" id="name" name="name" placeholder="Как к вам обращаться?" required>
+              <span class="field-group__error-text">Введите ваше имя</span>
             </div>
             <div class="field-group field-group--phone">
               <label class="field-group__label" for="phone">Телефон<span>*</span></label>
-              <input class="field-group__input" type="text" id="phone" name="phone" placeholder="+7 ххх ххх хх хх">
+              <input class="field-group__input" type="text" id="phone" name="phone" placeholder="+7 ххх ххх хх хх" required>
+              <span class="field-group__error-text">Введите номер телефона</span>
             </div>
             <div class="field-group field-group--email">
               <label class="field-group__label" for="email">Email<span>*</span></label>
-              <input class="field-group__input" type="email" id="email" name="email" placeholder="Ваш email">
+              <input class="field-group__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+              <span class="field-group__error-text">Введите ваш email</span>
             </div>
             <div class="field-group field-group--address">
               <label class="field-group__label" for="address">Адрес<span>*</span></label>
-              <textarea class="field-group__input" id="address" name="address" placeholder="Адрес в Санкт-Петербурге"></textarea>
+              <textarea class="field-group__input" id="address" name="address" rows="1" placeholder="Адрес в Санкт-Петербурге" required></textarea>
+              <span class="field-group__error-text">Введите адрес доставки</span>
             </div>
             <div class="field-group field-group--notes">
               <label class="field-group__label" for="order-notes">Пожелания к заказу</label>
