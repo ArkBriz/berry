@@ -25,7 +25,7 @@ const PATH_TO_RAW = './raw/';
 const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
   `${PATH_TO_SOURCE}*.ico`,
-  `${PATH_TO_SOURCE}*.webmanifest`,
+  `${PATH_TO_SOURCE}favicons/*.webmanifest`,
   `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
