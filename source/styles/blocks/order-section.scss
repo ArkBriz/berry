@@ -4,7 +4,7 @@
 
   @include media("tablet") {
     width: 624px;
-    padding: 73px 0 100px;
+    padding: 81px 0 100px;
 
     & > .order-form > .form-group {
       margin-bottom: 40px;
@@ -13,6 +13,7 @@
 
   @include media("desktop") {
     width: 792px;
+    padding-top: 67px;
 
     & > .order-form > .form-group {
       margin-bottom: 48px;
@@ -21,6 +22,8 @@
 }
 
 .order-section__container {
+  margin-bottom: 5px;
+
   @include media ("tablet") {
     width: 485px;
     margin: 0 auto;

@@ -1,7 +1,7 @@
 .news {
   position: relative;
   width: $mobile-width-min;
-  padding: 96px 26px 60px;
+  padding: 102px 26px 60px;
 
   &::before {
     position: absolute;
@@ -20,7 +20,7 @@
 
   @include media("tablet") {
     width: 716px;
-    padding: 114px 0 100px;
+    padding: 114px 0 108px;
 
     &::before {
       width: 296px;
@@ -29,7 +29,8 @@
   }
 
   @include media("desktop") {
-    width: 1128px;
+    width: 1152px;
+    padding: 139px 0 100px;
   }
 }
 
@@ -37,18 +38,20 @@
   display: grid;
   gap: 24px;
 
-  margin-top: 64px;
+  margin-top: 66px;
 
   @include media("tablet") {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 34px 20px;
+    gap: 34px 21px;
 
     margin-top: 72px;
   }
 
   @include media("desktop") {
     gap: 24px;
+    margin-top: 98px;
+    margin-left: 12px;
   }
 }

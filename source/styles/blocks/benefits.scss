@@ -16,8 +16,8 @@
 
 .benefits__item {
   position: relative;
-  margin-bottom: 12px;
-  padding-left: 50px;
+  margin-bottom: 19px;
+  padding-left: 44px;
 
   &::before {
     position: absolute;
@@ -45,6 +45,6 @@
   }
 
   @include media("tablet") {
-    margin-bottom: 19px;
+    margin-bottom: 24px;
   }
 }

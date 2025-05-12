@@ -6,21 +6,30 @@
   display: grid;
   grid-template-columns: 52px 1fr;
   justify-content: end;
-  row-gap: 9px;
+  row-gap: 4px;
 
   width: $mobile-width-min;
   margin: 0 auto;
-  padding: 11px 26px 20px;
+  padding: 19px 26px 20px;
 
   @include media("tablet") {
     grid-template-columns: 135px 1fr 154px;
     column-gap: 20px;
     width: $tablet-width;
-    padding: 22px 26px 22px 20px;
+    padding: 19px 26px 22px 20px;
+
+    &--order {
+      padding: 17px 26px 22px 20px;
+    }
   }
 
   @include media("desktop") {
     width: 1124px;
+    padding-inline: 0;
+
+    & .logo {
+      padding-top: 4px;
+    }
   }
 }
 
@@ -28,8 +37,8 @@
   margin-left: auto;
 
   @include media("tablet") {
-    margin-left: 0;
     justify-self: center;
+    margin-left: 0;
   }
 }
 
@@ -39,5 +48,10 @@
 
   @include media("tablet") {
     grid-column: auto;
+    padding-top: 8px;
+  }
+
+  @include media("desktop") {
+    padding-top: 10px;
   }
 }

@@ -2,6 +2,10 @@
   position: relative;
   padding: 104px 0 60px;
 
+  .order-main & {
+    padding-top: 96px;
+  }
+
   &::before {
     position: absolute;
     top: 0;
@@ -18,7 +22,11 @@
   }
 
   @include media("tablet") {
-    padding: 114px 0 100px;
+    padding: 116px 0 100px;
+
+    .order-main & {
+      padding-top: 116px;
+    }
 
     &::before {
       width: 296px;
@@ -32,7 +40,11 @@
 
     width: 1124px;
     margin: 0 auto;
-    padding-top: 142px;
+    padding-top: 141px;
+
+    .order-main & {
+      padding-top: 144px;
+    }
   }
 }
 
@@ -43,12 +55,22 @@
 
   @include media("tablet") {
     width: $tablet-width;
-    padding: 0 188px 46px 180px;
+    padding: 0 180px 46px;
+
+    .order-main & {
+      padding-inline: 178px 181px;
+    }
   }
 
   @include media("desktop") {
+    align-self: flex-start;
     width: 551px;
+    margin-left: 21px;
     padding: 0;
+
+    .order-main & {
+      padding: 0;
+    }
   }
 }
 
@@ -59,16 +81,28 @@
   font-size: 16px;
   text-align: center;
 
+  .order-main & {
+    margin-top: 65px;
+  }
+
   @include media("tablet") {
-    margin-top: 72px;
-    margin-bottom: 20px;
+    margin-top: 74px;
+    margin-bottom: 29px;
 
     font-size: 20px;
     text-align: left;
+
+    & br {
+      display: none;
+    }
+
+    .order-main & {
+      margin-top: 75px;
+    }
   }
 
   @include media("desktop") {
-    margin-left: 110px;
+    margin-left: 101px;
   }
 }
 
@@ -76,7 +110,7 @@
   font-style: normal;
 
   @include media("desktop") {
-    margin-left: 110px;
+    margin-left: 100px;
   }
 }
 
@@ -89,21 +123,42 @@
 
   color: $black;
 
+  &--address {
+    margin-bottom: 19px;
+
+    @include media("tablet") {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--phone {
+    margin-bottom: 29px;
+
+    @include media("tablet") {
+      margin-bottom: 24px;
+    }
+  }
+
   &--email {
     margin-bottom: 0;
   }
 
   &::before {
     position: absolute;
-    top: 50%;
+    top: 53%;
     transform: translateY(-50%);
-    left: 0;
+    left: -2px;
 
     display: block;
     width: 32px;
     height: 32px;
 
     content: "";
+
+    @include media("tablet") {
+      top: 50%;
+      left: 0;
+    }
   }
 
   &--address::before {

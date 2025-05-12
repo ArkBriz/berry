@@ -1,10 +1,21 @@
 .form-group {
   margin: 0;
-  margin-bottom: 32px;
   padding: 0;
 
   font-size: 16px;
   border: none;
+
+  &:first-child {
+    margin-bottom: 28px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 11px;
+
+    & .form-group__title {
+      margin-bottom: 27px;
+    }
+  }
 
   @include media("tablet") {
     font-size: 18px;
@@ -16,6 +27,10 @@
 
     &:nth-child(2) {
       margin-bottom: 48px;
+
+      & .form-group__title {
+        margin-bottom: 42px;
+      }
     }
 
     &:nth-child(3) {
@@ -25,7 +40,15 @@
 
   @include media("desktop") {
     &:first-child {
-      margin-bottom: 57px;
+      margin-bottom: 40px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 33px;
+
+      & .form-group__title {
+        margin-bottom: 50px;
+      }
     }
 
     &:nth-child(3) {
@@ -35,19 +58,31 @@
 }
 
 .form-group__title {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 
   font-size: 20px;
   color: $green;
+
+  &--contacts {
+    margin-bottom: 29px;
+  }
 
   @include media("tablet") {
     margin-bottom: 40px;
 
     font-size: 28px;
+
+    &--contacts {
+      text-align: center;
+    }
   }
 
   @include media("desktop") {
-    margin-bottom: 48px;
+    margin-bottom: 49px;
+
+    &--contacts {
+      text-align: left;
+    }
   }
 }
 
@@ -64,7 +99,7 @@
       column-gap: 20px;
 
       & .form-group__item {
-        margin-bottom: 30px;
+        margin-bottom: 27px;
       }
 
       &::after {
@@ -77,7 +112,7 @@
 
     &--storage {
       & .form-group__item {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
     }
 
@@ -89,26 +124,27 @@
 
     &--contacts {
       display: grid;
-      row-gap: 36px;
+      row-gap: 34px;
     }
   }
 
   @include media("tablet") {
     &--berries {
       columns: 3;
-      column-gap: 66px;
+      column-gap: 51px;
 
       & .form-group__item {
-        margin-bottom: 20px;
+        margin-bottom: 17px;
       }
     }
 
     &--storage {
       columns: 2;
-      column-gap: 54px;
+      column-gap: 53px;
 
       & .form-group__item {
-        margin-bottom: 20px;
+        min-width: 224px;
+        margin-bottom: 16px;
       }
     }
 
@@ -137,21 +173,26 @@
   @include media("desktop") {
     &--berries {
       columns: 5;
-      column-gap: 48px;
+      column-gap: 32px;
+
+      .form-group__item {
+        width: fit-content;
+      }
     }
 
     &--storage {
-      columns: 3;
-      column-gap: 48px;
+      display: grid;
+      grid-template-columns: 157px 224px 166px;
+      gap: 48px;
     }
 
     &--delivery {
       grid-template-columns: 251px 354px;
       gap: 48px;
+    }
 
-      & br:last-child {
-        display: none;
-      }
+    &--contacts {
+      row-gap: 35px;
     }
   }
 }
@@ -159,4 +200,10 @@
 .form-group__item {
   padding-block: 5px;
   padding-left: 36px;
+
+  @include media("desktop") {
+    &:first-child br:last-child {
+      display: none;
+    }
+  }
 }

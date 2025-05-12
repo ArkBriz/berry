@@ -15,12 +15,12 @@
     justify-content: space-between;
     align-items: center;
     width: 716px;
-    padding-block: 22px;
+    padding-block: 18px;
   }
 
   @include media("desktop") {
     width: 1128px;
-    padding: 24px 36px;
+    padding: 20px 36px;
     padding-left: 0;
   }
 }
@@ -84,6 +84,8 @@
   }
 
   &--opened .page-header__toggler {
+    width: 47px;
+
     &::before,
     &::after {
     content: "";

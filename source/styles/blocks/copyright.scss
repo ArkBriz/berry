@@ -31,6 +31,10 @@
   }
 }
 
-.copyright__logo {
-  height: 32px;
+.copyright__logo svg {
+  width: 20px;
+
+  @include media("tablet") {
+    width: 26px;
+  }
 }

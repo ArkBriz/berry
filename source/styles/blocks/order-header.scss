@@ -73,6 +73,10 @@ background-image:
       height: 42px;
     }
   }
+
+  @include media("desktop") {
+    padding-bottom: 89px;
+  }
 }
 
 .order-header__title {
@@ -82,13 +86,13 @@ background-image:
 
   font-family: "Comfortaa", "Arial", sans-serif;
   font-size: 36px;
-  line-height: 120%;
+  line-height: 112%;
   font-weight: 400;
   color: $green;
 
   @include media("tablet") {
     max-width: 610px;
-    margin-bottom: 52px;
+    margin-bottom: 54px;
 
     font-size: 48px;
   }
@@ -105,6 +109,8 @@ background-image:
   width: 268px;
   margin: 0 auto;
 
+  font-size: 16px;
+
   @include media("tablet") {
     width: 480px;
 
@@ -117,5 +123,7 @@ background-image:
 
   @include media("desktop") {
     width: 550px;
+
+    line-height: 22px;
   }
 }

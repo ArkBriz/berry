@@ -11,8 +11,10 @@
   list-style-type: none;
 
   @include media("tablet") {
-    justify-content: center;
+    min-width: 222px;
+    justify-content: flex-end;
     gap: 10px 32px;
+    padding-top: 5px;
   }
 }
 
@@ -22,6 +24,16 @@
   height: 32px;
 
   color: $green;
+
+  @include media("tablet") {
+    width: 40px;
+    height: 40px;
+
+    & svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
 
   &:hover svg,
   &:focus svg {

@@ -5,5 +5,15 @@
 .order-form__button {
   min-width: 264px;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 22px auto 0;
+  padding-block: 17px 12px;
+
+  @include media("tablet") {
+    min-width: 336px;
+    margin-top: 0;
+    padding-bottom: 14px;
+
+    font-family: "Raleway", "Arial", sans-serif;
+    font-size: 28px;
+  }
 }

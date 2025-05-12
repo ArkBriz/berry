@@ -3,8 +3,13 @@
   flex-direction: column;
   border-radius: 40px;
   align-items: center;
-  width: 264px;
+  width: 268px;
+  min-height: 432px;
   padding-bottom: 40px;
+
+  @include media("desktop") {
+    width: 266px;
+  }
 }
 
 .card__link {
@@ -39,25 +44,35 @@
 
 .card__title {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   padding-inline: 15px;
 
   font-size: 28px;
   font-weight: 400;
   color: $green;
   text-align: center;
+
+  @include media ("tablet") {
+    margin-bottom: 33px;
+  }
 }
 
 .card__img {
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   border-radius: 40px 40px 0 0;
+
+  @include media ("tablet") {
+    margin-bottom: 29px;
+  }
 }
 
 .card__info {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  gap: 12px;
+  gap: 19px;
   margin-bottom: 38px;
+
+  font-size: 18px;
 
   & dd {
     max-width: 90px;
@@ -68,5 +83,10 @@
 .card__button {
   width: 220px;
   margin-bottom: 14px;
-  vertical-align: middle;
+  margin-left: 4px;
+  padding-bottom: 13px;
+
+  @include media ("tablet") {
+    padding-bottom: 17px;
+  }
 }

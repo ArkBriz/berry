@@ -5,15 +5,25 @@
 
   &--address {
     min-height: 112px;
+
+    .field-group__input {
+      padding-top: 13px;
+    }
   }
 
   &--notes {
     min-height: 148px;
+
+    .field-group__label {
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
   }
 
   @include media ("tablet") {
     &--name {
       grid-area: name;
+      margin-top: 5px;
     }
 
     &--phone {
@@ -27,12 +37,26 @@
     &--address {
       grid-area: address;
       min-height: 76px;
+
+      .field-group__input {
+        padding-block: 17px;
+      }
     }
 
     &--notes {
       grid-area: notes;
       align-self: stretch;
       min-height: 168px;
+
+      .field-group__label {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  @include media ("desktop") {
+    &--address .field-group__input {
+      padding-block: 18px;
     }
   }
 
@@ -49,11 +73,13 @@
 }
 
 .field-group__label {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   margin-left: 12px;
   font-size: 14px;
 
   @include media ("tablet") {
+    margin-bottom: 4px;
+
     font-size: 16px;
     line-height: 20px;
   }
@@ -71,6 +97,7 @@
   padding: 16px 12px;
 
   font-size: 16px;
+  line-height: 100%;
 
   border: 1px solid $green;
   border-radius: 20px;
@@ -78,6 +105,7 @@
   cursor: pointer;
 
   &::placeholder {
+    font-family: "Raleway", "Arial", sans-serif;
     font-size: 16px;
     color: $gray-disabled;
   }
