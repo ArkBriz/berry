@@ -1,0 +1,1 @@
+var e=document.querySelector(".page-header__container"),a=e.querySelector(".page-header__toggler");e.classList.remove("page-header__container--nojs");a.addEventListener("click",()=>{e.classList.toggle("page-header__container--closed"),e.classList.toggle("page-header__container--opened")});
