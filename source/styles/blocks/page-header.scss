@@ -23,6 +23,62 @@
     padding: 20px 36px;
     padding-left: 0;
   }
+
+  &--closed .page-header__toggler::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 5px;
+    margin-top: 15px;
+
+    background-color: $green;
+    border-radius: 5px;
+    box-shadow:
+      0 12.5px $green,
+      0 25px $green;
+  }
+
+  &--closed .page-header__toggler:hover::before,
+  &--closed .page-header__toggler:focus::before {
+    background-color: $green-hover;
+
+    box-shadow:
+      0 12.5px $green-hover,
+      0 25px $green-hover;
+  }
+
+  &--opened .page-header__toggler {
+    width: 47px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+
+      display: block;
+      width: 35px;
+      height: 5px;
+
+      background-color: rgb($green, 0.75);
+      border-radius: 5px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: $green-hover;
+    }
+  }
 }
 
 .page-header__wrapper {
@@ -56,63 +112,5 @@
 @include media("mobile") {
   .page-header__container--nojs .page-header__toggler {
     display: none;
-  }
-}
-
-.page-header__container {
-  &--closed .page-header__toggler::before {
-    content: "";
-    display: block;
-    width: 45px;
-    height: 5px;
-    margin-top: 15px;
-
-    background-color: $green;
-    border-radius: 5px;
-    box-shadow:
-        0 12.5px $green,
-        0 25px $green;
-  }
-
-  &--closed .page-header__toggler:hover::before,
-  &--closed .page-header__toggler:focus::before {
-    background-color: $green-hover;
-
-    box-shadow:
-    0 12.5px $green-hover,
-    0 25px $green-hover;
-  }
-
-  &--opened .page-header__toggler {
-    width: 47px;
-
-    &::before,
-    &::after {
-    content: "";
-    position: absolute;
-    top: 28px;
-
-    display: block;
-    width: 35px;
-    height: 5px;
-
-    background-color: rgb($green, 0.75);
-    border-radius: 5px;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover::before,
-    &:hover::after,
-    &:focus::before,
-    &:focus::after {
-      background-color: $green-hover;
-    }
   }
 }

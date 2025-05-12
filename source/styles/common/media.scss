@@ -4,11 +4,13 @@
       @content;
     }
   }
+
   @else if $breakpoint == "tablet" {
     @media (min-width: $tablet-width) {
       @content;
     }
   }
+
   @else if $breakpoint == "mobile" {
     @media (max-width: $mobile-width-max) {
       @content;

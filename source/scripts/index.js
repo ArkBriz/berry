@@ -1,6 +1,5 @@
 const header = document.querySelector('.page-header__container');
 const headerButton = header.querySelector('.page-header__toggler');
-const menu = header.querySelector('.nav');
 
 header.classList.remove('page-header__container--nojs');
 

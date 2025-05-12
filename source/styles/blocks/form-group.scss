@@ -158,13 +158,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
-        "name ."
-        "phone email"
+        "name    ."
+        "phone   email"
         "address address"
-        "notes notes";
+        "notes   notes";
       align-items: start;
-      row-gap: 36px;
-      column-gap: 24px;
+      gap: 36px 24px;
 
       width: 624px;
     }
