@@ -48,24 +48,21 @@
   @include media("tablet") {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0 40px;
   }
 }
 
 .nav__item {
   margin-bottom: 22px;
 
-  @include media("tablet") {
-    margin-right: 45px;
+  @include media ("tablet") {
     margin-bottom: 0;
   }
 }
 
 .nav__item:last-child {
   margin-bottom: 0;
-
-  @include media("tablet") {
-    margin-right: 12px;
-  }
 }
 
 .nav__link {
@@ -73,10 +70,6 @@
   padding-block: 5px;
 
   color: #000000;
-
-  &--current {
-    color: $green;
-  }
 
   &:hover,
   &:focus {
@@ -86,6 +79,16 @@
 
   &:active {
     color: $green-active;
+  }
+
+  &--current {
+    color: $green;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $green;
+    }
   }
 
   @include media("tablet") {

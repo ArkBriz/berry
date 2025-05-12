@@ -13,7 +13,8 @@
   padding: 11px 26px 20px;
 
   @include media("tablet") {
-    grid-template-columns: 135px 1fr 153px;
+    grid-template-columns: 135px 1fr 154px;
+    column-gap: 20px;
     width: $tablet-width;
     padding: 22px 26px 22px 20px;
   }

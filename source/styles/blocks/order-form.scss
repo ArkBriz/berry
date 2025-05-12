@@ -3,6 +3,7 @@
 }
 
 .order-form__button {
-  width: 264px;
+  min-width: 264px;
+  max-width: 500px;
   margin: 0 auto;
 }

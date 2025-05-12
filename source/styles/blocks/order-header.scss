@@ -41,6 +41,7 @@ background-image:
 }
 
 .order-header__container {
+  position: relative;
   margin: 0 auto;
   padding-top: 64px;
   padding-bottom: 74px;
@@ -48,18 +49,34 @@ background-image:
   background-color: $white;
   text-align: center;
 
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 228px;
+    height: 32px;
+    margin: 0 auto;
+
+    background-image: url("../icons/stack.svg#branch-2");
+    content: "";
+  }
+
   @include media("tablet") {
     padding-top: 100px;
     padding-bottom: 77px;
-  }
 
-  @include media("desktop") {
-    margin-bottom: 88px;
+    &::after {
+      width: 296px;
+      height: 42px;
+    }
   }
 }
 
 .order-header__title {
-  width: 268px;
+  max-width: 268px;
   margin: 0 auto;
   margin-bottom: 32px;
 
@@ -70,13 +87,14 @@ background-image:
   color: $green;
 
   @include media("tablet") {
-    width: 480px;
+    max-width: 610px;
     margin-bottom: 52px;
 
     font-size: 48px;
   }
 
   @include media("desktop") {
+    max-width: 1024px;
     margin-bottom: 48px;
 
     font-size: 52px;

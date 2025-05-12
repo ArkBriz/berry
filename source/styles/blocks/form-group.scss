@@ -108,7 +108,6 @@
       column-gap: 54px;
 
       & .form-group__item {
-        width: max-content;
         margin-bottom: 20px;
       }
     }
@@ -127,6 +126,7 @@
         "phone email"
         "address address"
         "notes notes";
+      align-items: start;
       row-gap: 36px;
       column-gap: 24px;
 
@@ -141,13 +141,8 @@
     }
 
     &--storage {
-      display: grid;
-      grid-template-columns: repeat(3, min-content);
-      gap: 48px;
-
-      & .form-group__item {
-        margin-bottom: 0;
-      }
+      columns: 3;
+      column-gap: 48px;
     }
 
     &--delivery {

@@ -2,13 +2,31 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  color: $black;
+  outline: none;
+
+  &:hover .copyright__name,
+  &:hover .copyright__logo,
+  &:focus .copyright__name,
+  &:focus .copyright__logo {
+    color: $green-hover;
+  }
+
+  &:active .copyright__name,
+  &:active .copyright__logo {
+    color: $green-active;
+  }
 }
 
 .copyright__name {
+  padding-block: 9px;
   font-size: 11px;
   color: $black;
 
   @include media("tablet") {
+    padding-block: 20px;
+
     font-size: 16px;
   }
 }

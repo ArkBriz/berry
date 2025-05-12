@@ -4,6 +4,7 @@
   border-radius: 40px;
   align-items: center;
   width: 264px;
+  padding-bottom: 40px;
 }
 
 .card__link {
@@ -39,10 +40,12 @@
 .card__title {
   margin: 0;
   margin-bottom: 28px;
+  padding-inline: 15px;
 
   font-size: 28px;
   font-weight: 400;
   color: $green;
+  text-align: center;
 }
 
 .card__img {
@@ -57,11 +60,13 @@
   margin-bottom: 38px;
 
   & dd {
+    max-width: 90px;
     margin: 0;
   }
 }
 
 .card__button {
   width: 220px;
-  margin-bottom: 54px;
+  margin-bottom: 14px;
+  vertical-align: middle;
 }

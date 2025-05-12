@@ -28,6 +28,8 @@
 
   @include media("desktop") {
     display: flex;
+    align-items: center;
+
     width: 1124px;
     margin: 0 auto;
     padding-top: 142px;

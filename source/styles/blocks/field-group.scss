@@ -31,15 +31,17 @@
 
     &--notes {
       grid-area: notes;
+      align-self: stretch;
       min-height: 168px;
     }
   }
 
   &__error-text {
-    position: absolute;
-    bottom: -25px;
+    // position: absolute;
+    // bottom: -25px;
 
     display: none;
+    margin-top: 10px;
     padding-left: 13px;
 
     color: $red-error;
